@@ -38,8 +38,13 @@ class EmotionDetectionDataset(torch.utils.data.Dataset):
 class EmotionalModel(pl.LightningModule):
     def __init__(self, num_class):
         super(EmotionalModel,self).__init__()
-     
-     
+        # self.model = models.resnet18(weights='DEFAULT')
+        # in_features = self.model.fc.in_features
+        # self.model.fc = torch.nn.Linear(in_features, num_class)
+
+        # self.model = models.efficientnet_b3(weight='DEFAULT')  # Using EfficientNet-B3
+        # in_features = self.model.classifier[1].in_features  # Get input features of classifier
+        # self.model.classifier[1] = torch.nn.Linear(in_features, num_class)
         self.cnn_model = torch.nn.Sequential(
             torch.nn.Conv2d(3,32, kernel_size=5),
             torch.nn.ReLU(),
