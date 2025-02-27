@@ -1,22 +1,19 @@
-### Build and Deploy a Customer Feedback Analysis System
-You are tasked with developing a machine learning pipeline that analyzes customer feedback data to extract actionable insights. The system should handle data ingestion, preprocessing,  model training, and deployment for real-time predictions.
+### Build Emotions Prediction for a Hackathon
+Your task is to develop a robust image classification model capable of predicting the emotion depicted in an image. The training dataset contains labeled images along with their respective emotions, while the test dataset includes images for which predictions must be generated.
 
 
-#### Data sources: https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews
+#### Data sources: Provided by MachineHack at https://machinehack.com/hackathons/emotions_prediction_hackathon/overview
 Requirements:
 
-1. Data Ingestion and Preprocessing:
-o Design a pipeline to handle raw customer feedback (e.g., text reviews) from multiple sources (CSV files, APIs).
-Clean the data by removing duplicates, handling missing values, and normalizing text.Identify and implement techniques to handle imbalanced datasets.
-2. Model Development:
-Train a machine learning model to classify feedback into predefined categories (e.g., Positive, Negative, Neutral).
-Explore and justify your choice of model(s) (e.g., traditional ML like Random Forests vs deep learning like BERT).
-Evaluate your model using appropriate metrics like precision, recall, and F1 score.
-3. Feature Engineering:
-o Extract meaningful features from the feedback text (e.g., TF-IDF, embeddings). Include exploratory data analysis (EDA) to support your feature selection decisions.
-4. Model Deployment:
-Develop an API to serve the model for real-time feedback classification. Ensure the API can handle high concurrency and provides predictions with low latency.
-5. Monitoring and Feedback Loop:
-Implement a basic monitoring system to track model performance over time (e.g., data drift, prediction accuracy).
-Suggest a strategy to retrain the model periodically with new
-data.
+1. Data Preprocessing:Normalize image data for better model performance.Perform data augmentation techniques such as rotation, flipping, and scaling to make the model more robust.
+
+2. Model Development: Use pre-trained models like ResNet, VGG, or EfficientNet, fine-tuning them for emotion classification.
+Experiment with custom CNN architectures to see if they outperform pre-trained models.
+
+3. Training and Optimization:
+Employ techniques like learning rate scheduling, early stopping, and dropout regularization to avoid overfitting.
+Utilize libraries like TensorFlow, PyTorch, or Keras for efficient model building.
+Validation and Testing:
+
+Ensure your model generalizes well by using k-fold cross-validation.
+Generate predictions for the test dataset in the required format.
